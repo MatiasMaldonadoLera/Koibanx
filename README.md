@@ -36,5 +36,4 @@ f. Enviar un email a tech@koibanx.com con asunto ‘Challenge backend’ y con e
 del repositorio.
 
 ## Nota <a name="nota"></a>
-No llegue a terminar el challengue, no me di cuenta que tenia un repositorio en el zip, lo hice sin fijarme, espero que puedan verlo igual.Agregue motores de plantilla para la visualizacion
-Funciona con npm i  y npm start
+No llegue a terminar el challengue, no me di cuenta que tenia un repositorio en el zip, lo hice sin fijarme, espero que puedan verlo igual.Agregue motores de plantilla para la visualizacion. El proyecto funciona con npm i  y npm start
