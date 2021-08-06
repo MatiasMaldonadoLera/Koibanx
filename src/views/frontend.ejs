@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Tabla de Cliente </title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1> <%= title %></h1>
+
+        <div class="form-group">
+            <a class="btn btn-primary" href="/formulario"> Agregar un comercio</a>
+    </div>
+    <br>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Comercio</th>
+                <th>CUIT</th>
+                <th>Concepto 1</th>
+                <th>Concepto 2</th>
+                <th>Concepto 3</th>
+                <th>Concepto 4</th>
+                <th>Concepto 5</th>
+                <th>Concepto 6</th>
+                <th>Balance Actual</th>
+                <th>Activo</th>
+                <th>Ultima Venta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (var i=0; i< comercios.length; i++ )  { %>
+                <tr>
+                    <td><%= comercios[i]._id %></td>
+                    <td> <strong> <%= comercios[i].comercio %> </strong></td>
+                    <td>  <%= comercios[i].cuit %></td>
+                    <td>  <%= comercios[i].conceptos[0] %></td>
+                    <td>  <%= comercios[i].conceptos[1] %></td>
+                    <td>  <%= comercios[i].conceptos[2] %></td>
+                    <td>  <%= comercios[i].conceptos[3] %></td>
+                    <td>  <%= comercios[i].conceptos[4] %></td>
+                    <td>   <%= comercios[i].conceptos[5] %></td>
+                    <td>  <%= comercios[i].balanceActual %></td>
+                    <td>  <a class="<%= comercios[i].activo ? 'btn btn-success': 'btn btn-dark' %>"
+                        href="/activar/<%= comercios[i]._id %>" id="boton">  <% if (comercios[i].activo) {  %>SI<% }  else{ %>NO<% } %></a>
+                     <!--a id="delete" 
+                         class="btn btn-danger" href="/delete/<%= comercios[i]._id %>"> Eliminar</a-->
+                    </td>
+                    <td>  <%= comercios[i].ultimaVenta %></td>
+                </tr>
+
+            <%       } %>
+        </tbody>
+    </table>
+
+<hr>
+
+</div>
+<script>
+
+
+</script>
+</body>
+</html>
